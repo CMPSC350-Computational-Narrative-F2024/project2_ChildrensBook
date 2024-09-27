@@ -5,7 +5,7 @@
 Activity                   | Deadline
 -------------------------- | ------------------------------
 Regular Commits:  | September 26th-October 18th, 2024 (total: 20 commit requirement, at least 1 on September 27th and October 4th)
-Planning (add a age range and theme to the report) | September 26th, 2024 by 4:20pm
+Planning (add a theme to the report) | September 26th, 2024 by 4:20pm
 Peer Interview ([Google Form](https://forms.gle/R7wzwzshncjcyjdf9)) | October 4th, 2024 during lab
 Final submission and Critique | October 18th, 2024 by 11am, critique in class and during lab if needed
 
