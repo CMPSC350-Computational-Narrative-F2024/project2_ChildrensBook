@@ -40,15 +40,16 @@ This assignment also contributes to the `Modes of Expression` and `Human Express
 ## Baseline Requirements
 
 * Use a `programming language` of your choice to generate a `children's book` using `OpenAI API`. 
-* Your book's content must be created by applying a `GPT model` (your choice) via `API` to assist in generating text and images for the story. Do this in increments and it should be as automated and as streamlined as possible. For example, the output of one text generation prompt can be automatically used as an input to image generation in your code - you should not have to copy and paste things!
+* Your book's content must be generated using an `assistant` with `Assistants API` that will then call various OpenAI models to generate text and images for the story that flow together in a cohesive book. Essentially, you are building an application for yourself to generate a book. The generation process should be as automated and as streamlined as possible - you should not have to copy and paste things!
 * The book's generated content must incorporate:
-    - constraints
+    - at least one constraint
     - environmental story-telling
     - your own grammar
     - images (at least 10)
 * Your book must have a title and a front page cover.
 * The generated book should range from ~500 to 1000 words, be oriented for ages 5-7, and follow your selected `theme`. If you are on the lower spectrum of generated text (closer to 500 words), you need more than 10 images. If your book is closer to 1000 words, 10 images is sufficient.
-* Be creative. This book does not need to follow a standard story book format. For example, instead, it can be a poem, it have a representation of a card or other game. It can be weird. 
+* Be creative. This book does not need to follow a standard story book format. For example, instead, it can be a poem, it have a representation of a card or another game. It can totally be weird. 
+* The final version of the book should be in a PDF format that is printable.
 
 ### Assessment
 
@@ -60,7 +61,7 @@ This contains documentation of all the prompts you have tried to use along with 
 
 ### `src/main.py`
 
-The program behind your story generation, including communication with the GPT API. 
+The program behind your story generation, including communication with the GPT API. If you use additional programs, include them in `src`.
 
 Final submissions that do not include working code or a (mostly) completed report will be considered `Incomplete`. Individuals who do not participate in (most of) the `process` portions of the assignments will have their assignment marked as `Incomplete`.
 

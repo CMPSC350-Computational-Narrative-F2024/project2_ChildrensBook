@@ -1,8 +1,8 @@
-#!/usr/bin/python
-
 import os
-import openai
+from openai import OpenAI
 from dotenv import dotenv_values
+
+client = OpenAI()
 
 # Set up OpenAI credentials
 
@@ -11,38 +11,34 @@ CONFIG = dotenv_values(".env")
 OPEN_AI_KEY = CONFIG["KEY"] or os.environ["OPEN_AI_KEY"]
 OPEN_AI_ORG = CONFIG["ORG"] or os.environ["OPEN_AI_ORG"]
 
-openai.api_key = OPEN_AI_KEY
-openai.organization = OPEN_AI_ORG
+client.api_key = OPEN_AI_KEY
+client.organization = OPEN_AI_ORG
 
-def load_file(filename: str = "") -> str:
-    """Loads an arbitrary file name"""
-    with open(filename, "r") as fh:
-        return fh.read()
+assistant = client.beta.assistants.create(
+  name="Math Tutor",
+  instructions="You are a personal math tutor. Write and run code to answer math questions.",
+  tools=[{"type": "code_interpreter"}],
+  model="gpt-4o",
+)
 
-def main():
+thread = client.beta.threads.create()
 
-    # Load source file
-    prompt = load_file("data/prompt.txt")
+message = client.beta.threads.messages.create(
+  thread_id=thread.id,
+  role="user",
+  content="I need to solve the equation `3x + 11 = 14`. Can you help me?"
+)
 
-    response = openai.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-        # "Level of risk" associated with model predictions
-        temperature = 0.9,
-        top_p = 1,
-        # Maximum size of requests (this is already max size)
-        max_tokens = 100, #(4097 - len(prompt))
-        # Number of results to attempt and return
-        n = 10
-    )
-    #print(response.choices[0].message)
+run = client.beta.threads.runs.create_and_poll(
+  thread_id=thread.id,
+  assistant_id=assistant.id,
+  instructions="Please address the user as Jane Doe. The user has a premium account."
+)
 
-    # Extract the response text
-    result = response.choices[0].message.content.strip()
-
-    print(result)
-    
-if __name__ == "__main__":
-    main()
+if run.status == 'completed': 
+  messages = client.beta.threads.messages.list(
+    thread_id=thread.id
+  )
+  print(messages)
+else:
+  print(run.status)
