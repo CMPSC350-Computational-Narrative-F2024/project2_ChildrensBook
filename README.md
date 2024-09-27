@@ -6,7 +6,7 @@ Activity                   | Deadline
 -------------------------- | ------------------------------
 Regular Commits:  | September 26th-October 18th, 2024 (total: 20 commit requirement, at least 1 on September 27th and October 4th)
 Planning (add a age range and theme to the report) | September 26th, 2024 by 4:20pm
-Peer Interview ([Google Form](https://forms.gle/JUygtcTEVhNvWcbM7)) | October 4th, 2024 during lab
+Peer Interview ([Google Form](https://forms.gle/R7wzwzshncjcyjdf9)) | October 4th, 2024 during lab
 Final submission and Critique | October 18th, 2024 by 11am, critique in class and during lab if needed
 
 ## Summary
@@ -31,10 +31,11 @@ In this project, you are invited to create a children's book. Of course, all asp
 These assignment learning outcomes contribute to the following course learning outcomes described in the [course syllabus](https://github.com/CMPSC350-Computational-Narrative-F2024/course_information):
 
 1. Correctly describe and apply best practices of prompt engineering across a range of large language model (LLM) platforms to design successful prompts.
+3. Demonstrate and criticize systemic bias, ethical issues, and failure modes inherent in language technologies such as LLMs.
 4. Develop software to interact with language model application programmer interfaces (APIs).
 5. Create and justify a body of text products that leverage text-to-text, text-to-image, and other language model technologies.
 
-This assignment also contributes to the `Modes of Expression` distribution learning outcome.
+This assignment also contributes to the `Modes of Expression` and `Human Expression ` distribution learning outcome.
 
 ## Baseline Requirements
 
