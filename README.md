@@ -40,7 +40,7 @@ This assignment also contributes to the `Modes of Expression` and `Human Express
 ## Baseline Requirements
 
 * Use a `programming language` of your choice to generate a `children's book` using `OpenAI API`. 
-* Your book's content (text and images) must be generated using `OpenAI API`. 
+* Your book's content (text and images) must be generated using `OpenAI API` with multiple prompts. This process should include experimentation with prompts as well as at least *two* model parameters.
 * You must use an [assistant](https://platform.openai.com/docs/assistants/overview) with `Assistants API` as much as possible to create a cohesive flow for book generation. Essentially, you are building an application for yourself to generate a book. The generation process should be as automated and as streamlined as possible - you should not have to copy and paste things!
 * The book's generated content must incorporate:
     - at least one constraint
@@ -50,7 +50,7 @@ This assignment also contributes to the `Modes of Expression` and `Human Express
 * Your book must have a title and a front page cover.
 * The generated book should range from ~500 to 1000 words, be oriented for ages 5-7, and follow your selected `theme`. If you are on the lower spectrum of generated text (closer to 500 words), you need more than 10 images. If your book is closer to 1000 words, 10 images is sufficient.
 * Be creative. This book does not need to follow a standard story book format. For example, instead, it can be a poem, it have a representation of a card or another game. It can totally be weird. 
-* The final version of the book should be in a PDF format that is printable. PDF should be automatically generated too!
+* The final version of the book should be in a PDF format that is printable. PDF can be automatically generated too!
 
 ### Assessment
 
